@@ -25,7 +25,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     if (post.creator._id === session?.user.id) {
       router.push("/profile");
     } else {
-      router.push(`/profile/${post.creator._id.toString()}`);
+      router.push(`/profile/${post.creator._id.toString()}?name=${post.creator.username}`);
     }
   };
 
